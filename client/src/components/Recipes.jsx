@@ -17,7 +17,7 @@ console.log(auth.favoriteRecipes)
     <div className='recipes-container'>
       {data.map((receta, index) => (
         <div key={index} className='recipe'>
-          <a href={receta.recipe.url}>
+          <a href={receta.recipe.uri}>
             <img src={receta?.recipe.image} />
             <h3>{receta.recipe.label}</h3>
           </a>

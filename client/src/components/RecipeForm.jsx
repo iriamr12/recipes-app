@@ -12,8 +12,7 @@ const [recipe, setRecipe ] = useState("");
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      props.getRecipeCb(recipe)
-      setRecipe("");
+      props.getRecipeCb(recipe);
     }
 
   return (
@@ -26,6 +25,7 @@ const [recipe, setRecipe ] = useState("");
         onChange={handleChange}
         />
       </form>
+
         
     </div>
   )
