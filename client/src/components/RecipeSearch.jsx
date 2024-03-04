@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import RecipeForm from './RecipeForm';
 import Recipes from './Recipes';
 import './RecipeSearch.css';
-import RecipeFilter from './RecipeFilter';
+// import RecipeFilter from './RecipeFilter';
 import Loading from './Loading.gif'
 
 const LoadingAnimation = () => (
@@ -15,7 +15,7 @@ const RecipeSearch = () => {
     const [loading, setLoading] = useState(true);
     const [recipes, setRecipes] = useState([]);
     const [error, setError] = useState("");
-    const [filteredRecipes, setFilteredRecipes] = useState([]);
+    // const [filteredRecipes, setFilteredRecipes] = useState([]);
 
     const APP_ID = "d9bb2e47";
     const APP_KEY = "9f3c6531be8a0e0e7c203dda75e9fdcd";
@@ -32,7 +32,7 @@ const RecipeSearch = () => {
                 console.log("We got data!");
                 console.log(data);
                 setRecipes(data.hits);
-                setFilteredRecipes(data.hits); // Initialize filtered recipes with all recipes
+                // setFilteredRecipes(data.hits); // Initialize filtered recipes with all recipes
             } else {
                 setError(`Server Error: ${response.status} ${response.statusText}`);
             }
@@ -43,29 +43,29 @@ const RecipeSearch = () => {
         setLoading(false);
     };
 
-    const handleFilterChange = (country, diet) => {
-        let filteredData = recipes;
+    // const handleFilterChange = (country, diet) => {
+    //     let filteredData = recipes;
 
-        // Filter by country
-        if (country !== "All") {
-            filteredData = filteredData.filter(item => item.recipe.cuisineType && item.recipe.cuisineType.includes(country.toLowerCase()));
-        }
+    //     // Filter by country
+    //     if (country !== "All") {
+    //         filteredData = filteredData.filter(item => item.recipe.cuisineType && item.recipe.cuisineType.includes(country.toLowerCase()));
+    //     }
 
-        // Filter by diet
-        if (diet !== "All") {
-            filteredData = filteredData.filter(item => item.recipe.dietLabels && item.recipe.dietLabels.includes(diet));
-        }
+    //     // Filter by diet
+    //     if (diet !== "All") {
+    //         filteredData = filteredData.filter(item => item.recipe.dietLabels && item.recipe.dietLabels.includes(diet));
+    //     }
 
-        // Filter by vegetarian dishes
-        filteredData = filteredData.filter(item => item.recipe.healthLabels && item.recipe.healthLabels.includes("Vegetarian"));
+    //     // Filter by vegetarian dishes
+    //     filteredData = filteredData.filter(item => item.recipe.healthLabels && item.recipe.healthLabels.includes("Vegetarian"));
 
-        setFilteredRecipes(filteredData);
-    };
+    //     setFilteredRecipes(filteredData);
+    // };
 
     useEffect(() => {
         const timeout = setTimeout(() => {
             setLoading(false);
-        }, 7000)
+        }, 5000)
         return () => clearTimeout(timeout);
     })
 
@@ -74,13 +74,13 @@ const RecipeSearch = () => {
              
             <div>
                 <RecipeForm getRecipeCb={(recipeName) => getRecipes(recipeName)} />
-                <RecipeFilter onFilterChange={handleFilterChange} />
+                {/* <RecipeFilter onFilterChange={handleFilterChange} /> */}
             </div>
             <div className='recipes-container'>
             {loading && <LoadingAnimation />}
                 {!loading && (
                 <>
-                    <Recipes data={filteredRecipes} />
+                    <Recipes data={recipes} />
                     {error && <p>Error: {error}</p>}
                 </>
                 )}
