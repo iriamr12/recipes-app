@@ -1,0 +1,14 @@
+.navbar{
+ background-color: #F3E1D5;
+ border-radius: 7px;
+ width: 100px;
+ position: relative;
+ margin-left: auto; /* Centra el elemento hacia la derecha */
+margin-right: auto;
+}
+
+.links{
+    position: relative;
+    margin-left: auto; /* Centra el elemento hacia la derecha */
+   margin-right: auto;  
+}

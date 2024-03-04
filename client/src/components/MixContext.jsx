@@ -10,6 +10,7 @@ const Mixcontext = ({children}) => {
 
     const[favoriteRecipes, setFavoriteRecipes] = useState([])
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const[savedRecipes, setSavedRecipes] = useState([])
 
     const navigate = useNavigate()
   
@@ -45,6 +46,11 @@ const Mixcontext = ({children}) => {
         console.log(favoriteRecipes);
     }
 
+    const addToSaved = (recipe) => {
+      setSavedRecipes((prevSavedRecipes) => [...prevSavedRecipes, recipe]);
+      console.log(savedRecipes);
+    }
+
     useEffect(() => {
       // Check local storage or any other mechanism to determine if the user is logged in
       // For example, you can check if a token exists in local storage
@@ -61,6 +67,8 @@ const Mixcontext = ({children}) => {
         logout,
         isLoggedIn,
         registration,
+        addToSaved,
+        savedRecipes
     }
 
   return (

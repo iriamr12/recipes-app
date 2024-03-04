@@ -1,4 +1,25 @@
-.profile{
+.container{
     width: 80%;
-    margin: 0 auto; 
+    /* margin: 0 auto; */
+    display:grid;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+
 }
+ .item1{
+    grid-row-start:2 ;
+    grid-row-end:6 ;
+    grid-column-start:1 ;
+    grid-column-end:12;
+    /* background-color: #F3E1D5;
+    border-radius: 7px; */
+ }
+
+ .item2{
+    grid-row-start:6 ;
+    grid-row-end:10 ;
+    grid-column-start:1 ;
+    grid-column-end: 12;
+    /* background-color: #F3E1D5;
+    border-radius: 7px; */
+ }
