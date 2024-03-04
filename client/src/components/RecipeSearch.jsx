@@ -77,7 +77,7 @@ const RecipeSearch = () => {
                 <RecipeFilter onFilterChange={handleFilterChange} />
             </div>
             <div className='recipes-container'>
-            {loading && <LoadingAnimation />} {/* Render loading animation */}
+            {loading && <LoadingAnimation />}
                 {!loading && (
                 <>
                     <Recipes data={filteredRecipes} />
