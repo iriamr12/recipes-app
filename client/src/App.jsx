@@ -7,6 +7,7 @@ import Mixcontext from './components/MixContext';
 import NavBar from './components/NavBar';
 import Login from './components/Login';
 import Register from './components/Register';
+import PrivateRoute from './components/PrivateRoute';
 
 
 function App(user) {
@@ -19,7 +20,7 @@ function App(user) {
           <Routes>
           <Route path='/' element={<Homepage/>}/> 
           <Route path='/RecipeSearch' element={<RecipeSearch/>}/> 
-          <Route path='/Profile' element={<Profile/>}/> 
+          <Route path='/Profile' element={<PrivateRoute><Profile/></PrivateRoute>}/> 
           <Route path='/login' element={<Login/>}/> 
           <Route path='/register' element={<Register/>}/> 
 

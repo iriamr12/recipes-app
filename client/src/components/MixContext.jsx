@@ -20,6 +20,7 @@ const Mixcontext = ({children}) => {
         localStorage.setItem("token", data.token);
         setIsLoggedIn(true);
         console.log(data.message, data.token);
+        navigate('/profile')
       } catch (error){
         console.log("Login failed:", error.response?.data|| error.message);
       }
