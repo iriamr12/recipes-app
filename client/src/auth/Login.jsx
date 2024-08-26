@@ -3,7 +3,7 @@ import './Login.css'
 import { GoogleLogin } from '@react-oauth/google';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { context } from './MixContext';
+import { context } from '../components/MixContext';
 
 const Login = () => {
     const[credentials, setCredentials] = useState({

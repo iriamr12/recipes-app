@@ -1,5 +1,5 @@
 import React from 'react'
-import RecipeSearch from './RecipeSearch'
+import RecipeSearch from '../components/RecipeSearch'
 import './Homepage.css'
 
 

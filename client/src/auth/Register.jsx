@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext, useState } from 'react'
-import { context } from './MixContext'
+import { context } from '../components/MixContext'
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogin } from '@react-oauth/google';
 

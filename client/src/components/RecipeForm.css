@@ -1,15 +1,27 @@
-input{
+.recipe-form {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
     display: flex;
-    padding: 15px;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
     background-color: white;
-    border: 2px solid black;
     color: #111;
     font-size: 15px;
-    box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
-    height: 58px;    
-    transform: skew(-3deg, 1deg);
-    font-family: 'Knewave', cursive;
-    letter-spacing: 2px;
+    font-family: 'Copernicus', serif;
     text-transform: uppercase;
+    border: none; /* Elimina el borde */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }

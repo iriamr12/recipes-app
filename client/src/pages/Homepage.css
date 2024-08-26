@@ -1,0 +1,14 @@
+body{
+    background-color: #BF4342;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+.header{
+    font-family: 'copernicus';
+    color: white;
+    font-size: 60px;
+    position: relative;
+    top: 5px;  
+}

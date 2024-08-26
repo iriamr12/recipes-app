@@ -1,36 +1,36 @@
-import './App.css'
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from './components/Homepage'
-import RecipeSearch from './components/RecipeSearch'
-import Profile from './components/Profile';
+import Homepage from './pages/Homepage';
+import RecipeSearch from './components/RecipeSearch';
+import Profile from './pages/Profile';
 import Mixcontext from './components/MixContext';
 import NavBar from './components/NavBar';
-import Login from './components/Login';
-import Register from './components/Register';
-import PrivateRoute from './components/PrivateRoute';
+import Login from './auth/Login';
+import Register from './auth/Register';
+import PrivateRoute from './auth/PrivateRoute';
 
-
-function App(user) {
-
+function App() {
   return (
+    <Mixcontext>
 
-<div>
-<Mixcontext>
-  <NavBar />
-          <Routes>
-          <Route path='/' element={<Homepage/>}/> 
-          <Route path='/RecipeSearch' element={<RecipeSearch/>}/> 
-          <Route path='/Profile' element={<PrivateRoute><Profile/></PrivateRoute>}/> 
-          <Route path='/login' element={<Login/>}/> 
-          <Route path='/register' element={<Register/>}/> 
+        <NavBar /> 
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/RecipeSearch' element={<RecipeSearch />} />
+          <Route 
+            path='/profile' 
+            element={
+              <PrivateRoute>
+                <Profile />
+              </PrivateRoute>
+            } 
+          />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+        </Routes>
 
-          </Routes>
-</Mixcontext>
-
-</div>
-          
-
-  )
+    </Mixcontext>
+  );
 }
 
-export default App
+export default App;

@@ -1,18 +1,26 @@
-.navbar{
- background-color: #F3E1D5;
- border-radius: 7px;
- width: 200px;
- position: relative;
- margin-left: auto; /* Centra el elemento hacia la derecha */
-margin-right: auto;
+/* NavBar.css */
+.navbar {
+    position: fixed; /* Fijar la barra de navegación en la parte superior */
+    top: 20px; /* Espaciado desde la parte superior */
+    left: 20px; /* Espaciado desde la izquierda */
+    display: flex; /* Usar flexbox para alinear los botones */
+    gap: 20px; /* Espacio entre los botones */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
 }
 
-.links{
-     padding-top: 10px;
-    padding-bottom: 10px;
+.nav-button {
+    background-color: #F3E1D5; /* Fondo del botón */
+    color: #111; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    font-family: 'Copernicus', serif; /* Fuente personalizada */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave para el hover */
 }
 
-.nav-link{
-    margin-right: 50px;
-    
+.nav-button:hover {
+    background-color: #BF4342; /* Color de fondo al pasar el ratón */
+    color: #fff; /* Color del texto al pasar el ratón */
 }

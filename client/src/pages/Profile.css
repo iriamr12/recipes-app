@@ -1,0 +1,53 @@
+body {
+   margin: 0; /* Elimina el margen predeterminado */
+   padding: 0; /* Elimina el padding predeterminado */
+}
+
+.container {
+   width: 80%;
+   margin: 0 auto; /* Centra el contenedor */
+   display: grid;
+   grid-template-areas:
+     "favorites favorites favorites favorites favorites favorites favorites favorites favorites favorites favorites favorites"
+     "saved saved saved saved saved saved saved saved saved saved saved saved";
+   grid-template-rows: auto auto; /* Filas automáticas según el contenido */
+   grid-template-columns: repeat(12, 1fr); /* Usa 12 columnas para la cuadrícula */
+   gap: 10px; /* Espacio entre los elementos, ajustado para ser más pequeño */
+   justify-items: start; /* Alinea los elementos a la izquierda */
+   padding: 0; /* Asegúrate de que no haya padding en el contenedor */
+ }
+
+.item1 {
+  grid-area: favorites; /* Uso de grid areas */
+  background-color: #F3E1D5; /* Fondo claro */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Espaciado interno */
+  transition: transform 0.3s; /* Transición para efecto hover */
+  margin: 0;
+}
+
+.item1:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.item2 {
+  grid-area: saved; /* Uso de grid areas */
+  background-color: #F3E1D5; /* Color de fondo diferente */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Espaciado interno */
+  transition: transform 0.3s; /* Transición para efecto hover */
+  margin: 0;
+}
+
+.item2:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Estilo para los encabezados si los agregas en FavoriteRecipes y SavedRecipes */
+h2 {
+  font-family: 'Copernicus', serif; /* Ejemplo de fuente */
+  color: #BF4342 ; /* Color de texto */
+  margin-bottom: 15px; /* Espacio debajo del título */
+}

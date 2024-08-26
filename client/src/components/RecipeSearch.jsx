@@ -43,24 +43,6 @@ const RecipeSearch = () => {
         setLoading(false);
     };
 
-    // const handleFilterChange = (country, diet) => {
-    //     let filteredData = recipes;
-
-    //     // Filter by country
-    //     if (country !== "All") {
-    //         filteredData = filteredData.filter(item => item.recipe.cuisineType && item.recipe.cuisineType.includes(country.toLowerCase()));
-    //     }
-
-    //     // Filter by diet
-    //     if (diet !== "All") {
-    //         filteredData = filteredData.filter(item => item.recipe.dietLabels && item.recipe.dietLabels.includes(diet));
-    //     }
-
-    //     // Filter by vegetarian dishes
-    //     filteredData = filteredData.filter(item => item.recipe.healthLabels && item.recipe.healthLabels.includes("Vegetarian"));
-
-    //     setFilteredRecipes(filteredData);
-    // };
 
     useEffect(() => {
         const timeout = setTimeout(() => {
